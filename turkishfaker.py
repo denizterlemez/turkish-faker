@@ -3,13 +3,13 @@ import random
 import  os
 import requests
 from bs4 import BeautifulSoup
-path = os.path.dirname(__file__)
+
 from lxml import etree
 
 
 
 def randommanname():
-    df = pd.read_csv(path + "/isimler.csv")
+    df = pd.read_csv("isimler.csv")
 
     erkek = df[df.cinsiyet == "E"]
     xds = df[df.cinsiyet == "U"]
@@ -22,7 +22,7 @@ def randommanname():
 
 
 def randomwomanname():
-    df = pd.read_csv(path + "/isimler.csv")
+    df = pd.read_csv("isimler.csv")
 
     woman = df[df.cinsiyet == "K"]
     xd = df[df.cinsiyet == "U"]
@@ -64,7 +64,7 @@ def fakephonenumberturkey():
 
 
 def cooltext():
-    s = open(path+"/ozlusozler.txt", "r", encoding="utf-8")
+    s = open("ozlusozler.txt", "r", encoding="utf-8")
     m = s.readlines()
     l = []
     for i in range(0, len(m) - 1):
@@ -80,7 +80,7 @@ def cooltext():
 
 
 def randomsurname():
-    s = open(path+"/surnames.txt", "r", encoding="utf-8")
+    s = open("surnames.txt", "r", encoding="utf-8")
     m = s.readlines()
     l = []
     for i in range(0, len(m) - 1):
